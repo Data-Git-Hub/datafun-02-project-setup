@@ -1,6 +1,6 @@
 # Python Code Reusable Module
 """
-Module: data-is-fun-part-one.py
+Module: data_is_fun_part_one.py
 Purpose: Reusable Module for Analytics Projects for NWMSU CSIS
 Description: This module provides a byline for my analytics projects. 
 Author: Data-Git-Hub

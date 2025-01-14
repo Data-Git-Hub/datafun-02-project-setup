@@ -15,7 +15,6 @@ TODO: Change the module name in this opening docstring
 #####################################
 
 import pathlib
-import stellar_analytics_utils
 # Import helpful modules from the Python Standard library
 # See more at: https://docs.python.org/3/library/
 
@@ -47,7 +46,7 @@ def main() -> None:
     This is used in best practices when coding.
     '''
     print("Starting........")
-    print(get_byline())
+#    print(get_byline())
     print("Complete.......")
 
 #####################################

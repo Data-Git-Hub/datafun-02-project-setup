@@ -100,8 +100,25 @@ def create_folders_from_list(folder_list: list) -> None:
 #####################################
 
 def create_prefixed_folders(folder_list: list, prefix: str) -> None:
-    # TODO: Implement this function professionally and remove the temporary pass
-    pass
+'''
+    Create prefixed folders by combining a list of folder names with a specified prefix.
+
+    Arguments:
+    folder_list -- A list of folder names to be prefixed and created.
+    prefix -- The prefix to prepend to each folder name.
+    '''
+    # Log the function call and its arguments
+    print(f"FUNCTION CALLED: create_prefixed_folders with folder_list={folder_list} and prefix={prefix}")
+
+    # Iterate through the folder list, apply the prefix, and create folders
+    for folder_name in folder_list:
+        prefixed_name = f"{prefix}{folder_name}"
+        folder_path = data_path.joinpath(prefixed_name)
+        try:
+            folder_path.mkdir(exist_ok=True)  # Create the folder if it doesn't exist
+            print(f"Folder created: {folder_path}")
+        except Exception as e:
+            print(f"ERROR: Could not create folder {folder_path}. Reason: {e}")
 
 #####################################
 # Define Function 4. While Loop: Write a function to create folders periodically (e.g., one folder every 5 seconds).
@@ -124,7 +141,7 @@ def main() -> None:
     print("            Starting........ Script")
     print("--------------------------------------------------")
     
-      # Print get_byline() from imported module
+    # Print get_byline() from imported module
     # TODO: Change this to use your module function and uncomment
     # print(f"Byline: {case_utils.get_byline()}")
 

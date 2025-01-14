@@ -55,6 +55,20 @@ def create_folders_for_range(start_year: int, end_year: int) -> None:
         # Log the function call and its arguments using an f-string
     print(f"FUNCTION CALLED: create_folders_for_range with start_year={start_year} and end_year={end_year}")
 
+ # Check if start_year is less than or equal to end_year
+    if start_year > end_year:
+        print("ERROR: start_year must be less than or equal to end_year.")
+        return
+
+# Loop through the range of years and create a folder for each year
+    for year in range(start_year, end_year + 1):
+        year_folder = data_path.joinpath(str(year))
+        try:
+            year_folder.mkdir(exist_ok=True)  # Create the folder if it doesn't exist
+            print(f"Folder created: {year_folder}")
+        except Exception as e:
+            print(f"ERROR: Could not create folder {year_folder}. Reason: {e}")
+
     # TODO: Implement the actual folder creation logic
     pass
 

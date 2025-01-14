@@ -2,4 +2,4 @@
 
 ---
 
-## Practice utilizing Cloning of repos to VS Code
+## Practice utilizing cloning of repos to VS Code

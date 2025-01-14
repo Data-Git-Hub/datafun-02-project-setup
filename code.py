@@ -14,6 +14,7 @@ Author: Data-Git-Hub
 
 # Import modules from standard library as need
 import pathlib
+import time
 
 # Import local modules
 import data_is_fun_part_one

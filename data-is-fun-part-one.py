@@ -34,7 +34,7 @@ years_in_operation: int = 90
 # TODO: Add or replace this with your floating point variable
 average_client_satisfaction_reviews_io: float = 1.3
 average_deliver_time_in_days: float = 7.6
-military_precentage: float = 0.10
+military_percentage: float = 0.10
 
 # declare a list of strings
 # TODO: Add or replace this with your list  
@@ -60,7 +60,7 @@ Redacted Online Cigar Online Storefront Analytics: Delivering Professional Insig
 ---------------------------------------------------------
 Free Shipping:                                              {free_shipping}
 Military Discount:                                          {military_discount}
-Military Discount Percentage:                               {military_precentage:.0%}
+Military Discount Percentage:                               {military_percentage:.0%}
 Years in Operation:                                         {years_in_operation} years
 Products Offered:                                           {product_type_offered}
 Client Satisfaction Scores Average Per http://review.io:    {average_client_satisfaction_reviews_io}

@@ -6,7 +6,7 @@ Module: code.py
 Purpose: Reusable Module for Analytics Projects for NWMSU CSIS
 Description: This module provides a byline for my analytics projects. 
 Author: Data-Git-Hub
-'''
+    '''
 
 #####################################
 # Import Modules
@@ -55,7 +55,7 @@ def create_folders_for_range(start_year: int, end_year: int) -> None:
         # Log the function call and its arguments using an f-string
     print(f"FUNCTION CALLED: create_folders_for_range with start_year={start_year} and end_year={end_year}")
 
- # Check if start_year is less than or equal to end_year
+# Check if start_year is less than or equal to end_year
     if start_year > end_year:
         print("ERROR: start_year must be less than or equal to end_year.")
         return
@@ -75,13 +75,15 @@ def create_folders_for_range(start_year: int, end_year: int) -> None:
 #####################################
 
 def create_folders_from_list(folder_list: list) -> None:
- '''
+
+    '''
     Create folders from a list of folder names.
 
     Arguments:
     folder_list -- A list of folder names to be created.
     '''
-    # Log the function call and its arguments using an f-string
+    
+# Log the function call and its arguments using an f-string
     print(f"FUNCTION CALLED: create_folders_from_list with folder_list={folder_list}")
 
     # Iterate through the folder list and create each folder
@@ -100,7 +102,8 @@ def create_folders_from_list(folder_list: list) -> None:
 #####################################
 
 def create_prefixed_folders(folder_list: list, prefix: str) -> None:
-'''
+
+    '''
     Create prefixed folders by combining a list of folder names with a specified prefix.
 
     Arguments:
@@ -126,7 +129,8 @@ def create_prefixed_folders(folder_list: list, prefix: str) -> None:
 #####################################
 
 def create_folders_periodically(duration_seconds: int) -> None:
-'''
+
+    '''
     Create folders periodically with a specified wait time between each.
 
     Arguments:
@@ -178,16 +182,40 @@ def main() -> None:
     create_prefixed_folders(folder_names, prefix)
 
     # Call function 4 to create folders periodically using while
-    duration_secs:int = 5  # duration in seconds
+    duration_secs = 5  # duration in seconds
     create_folders_periodically(duration_secs)
-
-    # TODO: Add options e.g., to force lowercase and remove spaces 
-    # to one or more of your functions (e.g. function 2) 
-    # Call your function and test these options
-    regions = ["North America", "South America", "Europe", "Asia", "Africa", "Oceania", "Middle East"]
-    # Uncomment this line after you've added your custom logic
-    # create_folders_from_list(regions, to_lowercase=True, remove_spaces=True)
     
+def create_folders_from_list(folder_list: list, to_lowercase: bool = False, remove_spaces: bool = False) -> None:
+    '''
+    Create folders from a list of folder names, with options to modify folder names.
+
+    Arguments:
+    folder_list -- A list of folder names to be created.
+    to_lowercase -- If True, converts folder names to lowercase.
+    remove_spaces -- If True, removes spaces from folder names.
+    '''
+    # Log the function call and its arguments
+    print(f"FUNCTION CALLED: create_folders_from_list with folder_list={folder_list}, to_lowercase={to_lowercase}, remove_spaces={remove_spaces}")
+
+    # Iterate through the folder list and create each folder
+    for folder_name in folder_list:
+        # Apply transformations if options are set
+        if to_lowercase:
+            folder_name = folder_name.lower()
+        if remove_spaces:
+            folder_name = folder_name.replace(" ", "_")
+
+        folder_path = data_path.joinpath(folder_name)
+        try:
+            folder_path.mkdir(exist_ok=True)  # Create the folder if it doesn't exist
+            print(f"Folder created: {folder_path}")
+        except Exception as e:
+            print(f"ERROR: Could not create folder {folder_path}. Reason: {e}")
+
+    # Create folders from regions, forcing lowercase and removing spaces
+    regions = ["North America", "South America", "Europe", "Asia", "Africa", "Oceania", "Middle East"]
+    create_folders_from_list(regions, to_lowercase=True, remove_spaces=True)
+
         # End of main execution
     print("------------------------------------------------- ")
     print("            Ending........ Script")
@@ -203,4 +231,3 @@ def main() -> None:
 if __name__ == '__main__':
     main()
 
-#TODO: Run this as a script and verify all code works as intended.

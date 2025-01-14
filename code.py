@@ -126,8 +126,29 @@ def create_prefixed_folders(folder_list: list, prefix: str) -> None:
 #####################################
 
 def create_folders_periodically(duration_seconds: int) -> None:
-    # TODO: Implement this function professionally and remove the temporary pass
-    pass
+'''
+    Create folders periodically with a specified wait time between each.
+
+    Arguments:
+    duration_seconds -- The time to wait in seconds between folder creations.
+    '''
+    # Log the function call and its arguments
+    print(f"FUNCTION CALLED: create_folders_periodically with duration_seconds={duration_seconds}")
+
+    # Define folder names to create
+    folder_names = ['periodic-folder-1', 'periodic-folder-2', 'periodic-folder-3']
+
+    for folder_name in folder_names:
+        folder_path = data_path.joinpath(folder_name)
+        try:
+            folder_path.mkdir(exist_ok=True)  # Create the folder if it doesn't exist
+            print(f"Folder created: {folder_path}")
+        except Exception as e:
+            print(f"ERROR: Could not create folder {folder_path}. Reason: {e}")
+
+        # Wait for the specified duration
+        print(f"Waiting {duration_seconds} seconds before creating the next folder...")
+        time.sleep(duration_seconds)
 
 #####################################
 # Define main() function for this module.
@@ -142,8 +163,7 @@ def main() -> None:
     print("--------------------------------------------------")
     
     # Print get_byline() from imported module
-    # TODO: Change this to use your module function and uncomment
-    # print(f"Byline: {case_utils.get_byline()}")
+    print(f"Byline: {data_is_fun_part_one.get_byline()}")
 
     # Call function 1 to create folders for a range (e.g. years)
     create_folders_for_range(start_year=2020, end_year=2023)

@@ -15,6 +15,11 @@ TODO: Change the module name in this opening docstring
 #####################################
 
 import pathlib
+
+# Import local modules
+# TODO: Change this to import your module and uncomment
+# import data-is-fun-part-one
+
 # Import helpful modules from the Python Standard library
 # See more at: https://docs.python.org/3/library/
 
@@ -22,32 +27,51 @@ import pathlib
 # Declare Global Variables
 #####################################
 
-
 #####################################
 # Define global functions (reusable instructions)
 #####################################
 
+#####################################
+# Define Function 1. For item in Range: Create a function to generate folders for a given range (e.g., years).
+# Pass in an int for the first year
+# Pass in an int for the last year
+#####################################
+
+#####################################
+# Define Function Function 2. For Item in List: Develop a function to create folders from a list of names.
+# Pass in a list of folder names 
+#####################################
+
+#####################################
+# Define Function 3. List Comprehension: Create a function to create prefixed folders by transforming a list of names and combining each with a prefix (e.g., "data-").
+# Pass in a list of folder names
+# Pass in a prefix (e.g. 'data-') to add to each
+#####################################
+
+#####################################
+# Define Function 4. While Loop: Write a function to create folders periodically (e.g., one folder every 5 seconds).
+# Pass in the wait time in seconds
+#####################################
 
 #####################################
 # Define main() function for this module.
 #####################################
 
 def main() -> None:
-    '''
-    Print results of get_byline() when main() is called.
+    ''' Main function of module. '''
 
-    This function prints the byline to the console when we run this as a script.
-    The type hint indicates this function doesn't return anything when called 
-    (that is, it has a Python type of None).
-    It doesn't need any additional information passed in, 
-    so there's nothing inside the parentheses.
-    Everything after the colon must be indented consistently (usually four spaces)
-
-    This is used in best practices when coding.
-    '''
-    print("Starting........")
-#    print(get_byline())
-    print("Complete.......")
+    # Start of main execution
+    print("------------------------------------------------- ")
+    print("            Starting........ Script")
+    print("--------------------------------------------------")
+    
+    
+    
+    
+    # End of main execution
+    print("------------------------------------------------- ")
+    print("            Ending........ Script")
+    print("--------------------------------------------------")
 
 #####################################
 # Conditional Execution

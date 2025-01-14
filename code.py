@@ -2,10 +2,10 @@
 ''' 
 This module provides functions for creating a series of project folders. 
 
+Module: code.py
 Purpose: Reusable Module for Analytics Projects for NWMSU CSIS
 Description: This module provides a byline for my analytics projects. 
 Author: Data-Git-Hub
-Module: code.py
 '''
 
 #####################################
@@ -15,7 +15,7 @@ Module: code.py
 import pathlib
 
 # Import local modules
-# import data-is-fun-part-one
+import data_is_fun_part_one
 
 # Import helpful modules from the Python Standard library
 # See more at: https://docs.python.org/3/library/

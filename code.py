@@ -5,9 +5,7 @@ This module provides functions for creating a series of project folders.
 Purpose: Reusable Module for Analytics Projects for NWMSU CSIS
 Description: This module provides a byline for my analytics projects. 
 Author: Data-Git-Hub
-Module: datafun-02-project-setup/code.py
-
-TODO: Change the module name in this opening docstring
+Module: code.py
 '''
 
 #####################################
@@ -17,7 +15,6 @@ TODO: Change the module name in this opening docstring
 import pathlib
 
 # Import local modules
-# TODO: Change this to import your module and uncomment
 # import data-is-fun-part-one
 
 # Import helpful modules from the Python Standard library
